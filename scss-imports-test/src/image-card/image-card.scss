@@ -1,0 +1,98 @@
+@mixin scrim() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.3;
+  background-color: #000000;
+  z-index: 1;
+}
+
+.el-horizontal-image-card {
+  position: relative;
+  display: block;
+  border-radius: 2px;
+  width: 28.8rem;
+  height: 16rem;
+
+  &:hover {
+    cursor: pointer;
+    .scrim {
+      opacity: 0.5;
+    }
+  }
+
+  .card-content {
+    position: absolute;
+    top: 1.6rem;
+    bottom: 1.6rem;
+    left: 1.6rem;
+    right: 1.6rem;
+    color: #fff;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-text-wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+
+    .card-text {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .card-title {
+      flex-grow: 1;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
+    el-icon {
+      margin-left: 2.4rem;
+    }
+  }
+
+  .scrim {
+    @include scrim;
+    border-radius: 2px;
+  }
+}
+
+.el-image-wrapper {
+  display: inline-block;
+
+  img {
+    display: block;
+  }
+
+  &.full-width,
+  &.full-width img {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  &.sized {
+    display: block;
+
+    .image {
+      overflow: hidden;
+      position: relative;
+      height: 0;
+    }
+
+    img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+

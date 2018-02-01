@@ -1,0 +1,24 @@
+html, body {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  margin: 40px auto;
+  width: 1160px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+@media (max-width: 1160px) {
+  .container {
+    width: 100%;
+  }
+}
