@@ -3,11 +3,6 @@ html, body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.container {
-  margin: 40px auto;
-  width: 1160px;
-}
-
 .grid {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -15,10 +10,4 @@ html, body {
 
 p {
   font-size: 1.6rem;
-}
-
-@media (max-width: 1160px) {
-  .container {
-    width: 100%;
-  }
 }
